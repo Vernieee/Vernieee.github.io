@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title> Time of the Day!</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body >
+        <div class="container">
+            <img src="time.jpg">
+            <h1 span id="hours">00</span></h1>
+            <h3 span>:</span></h3>
+            <h4 span id="minutes">00</span></h4>
+            <h5 span>:</span></h5>
+            <h6 span id="seconds">00</span></h6>
+            <h7 span id="session"> AM</span></h7>
+            <div class="quotes">
+                <p><b>TODAY'S QUOTES</b> </p>
+                <h2><b> Whenever you feel like quiting, always remember why you started!</b></h2>
+            </div>
+        </div>
+        <script>
+        function displayTime(){
+            var dateTime = new Date();
+            var hrs = dateTime.getHours();
+            var min = dateTime.getMinutes();
+            var sec = dateTime.getSeconds();
+            var session = document.getElementById('session');
+
+            if(hrs >= 12){
+                session.innerHTML = 'PM';
+            }else{
+                session.innerHTML = 'AM';
+            }
+
+            if(hrs > 12){
+                hrs = hrs - 12;
+            }
+
+            document.getElementById('hours').innerHTML = hrs;
+            document.getElementById('minutes').innerHTML = min;
+            document.getElementById('seconds').innerHTML = sec;
+        }
+        setInterval(displayTime, 10);
+        </script>
+    </body>
+</html>
