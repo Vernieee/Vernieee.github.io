@@ -1,14 +1,10 @@
-body{
-    background-color: #041C3C;
-  }
 #position{
   font-size: 18px;
   font-weight: bold;
 }
-.h1{
-  text-transform:uppercase;
-}
 header{
+  font-family:  'Georgia ';
+  font-weight: bold;
   text-align:center;
   background-color: #F6D8B9;
   padding-top: 2px;
@@ -20,6 +16,13 @@ header{
 }
 .profile{
   padding-top: 1%;
+}
+.profile img {
+  float: center;
+  transition: transform 1s ease; 
+}
+.profile img:hover {
+  transform: scale(1.3);
 }
 .social-icons .social-icon {
   display: inline-flex;
